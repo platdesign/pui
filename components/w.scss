@@ -1,6 +1,6 @@
 
 %w {}
-@mixin w($count:12) {
+@mixin w($count:8) {
 	@for $a from 1 through $count {
 		@for $b from 1 through $a {
 			.w-#{$b}-#{$a} {
