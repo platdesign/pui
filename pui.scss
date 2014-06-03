@@ -14,8 +14,8 @@
 
 @mixin pui {
 	@include reset;
-	@include w;
+	@include grid-flex;
 	@include page;
+	@include w;
 	@include helper;
-	@include grid;
 }

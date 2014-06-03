@@ -45,6 +45,13 @@ Platdesign UI - A scss-library for your daily needs.
 	Adds classes with a structure like `.w-1-3`, `.w-2-3`, etc. `$columns` defines the maximum divider of 100%.
 
 
+- **helper**
+	
+	Adds some helper-classes:
+
+	- `.tl`, `.tc`, `.tr` for text-alignment (left, center, right).
+	- `.fl`, `.fr` for `float:left` and `float:right`
+	- `.antialised` sets font-smoothing for text on dark backgrounds.
 
 
 -------
