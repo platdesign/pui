@@ -1,0 +1,26 @@
+{
+  "name": "pui",
+  "version": "0.1.0",
+  "homepage": "https://github.com/platdesign/pui",
+  "authors": [
+    "Christian Blaschke <mail@platdesign.de>"
+  ],
+  "description": "Platdesign UI - A scss-library for your daily needs.",
+  "main": "pui.scss",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "scss",
+    "css"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "vendor",
+    "test",
+    "tests"
+  ]
+}
