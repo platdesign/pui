@@ -6,7 +6,7 @@ Platdesign UI - A scss-library for your daily needs.
 ##Install
 - Bower: `bower install pui --save-dev`
 - Git: `git clone https://github.com/platdesign/pui.git`
-- Zip: [Download]()
+- Zip: [Download](https://github.com/platdesign/pui/archive/v0.1.0.zip)
 
 
 
