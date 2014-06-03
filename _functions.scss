@@ -1,0 +1,31 @@
+/**
+ * Get the first item of a list
+ * @param  {list} $list
+ * @return {int|string|list|float}
+ */
+@function first($list) {
+  @return nth($list, 1);
+}
+
+
+/**
+ * Get the last item of a list
+ * @param  {list} $list
+ * @return {int|string|list|float}
+ */
+@function last($list) {
+  @return nth($list, length($list));
+}
+
+
+
+
+/**
+ * Prepend an item in a list.
+ * @param  {list} $list
+ * @param  {list|int|float|string} $item
+ * @return {list}	Returs the new list.
+ */
+@function prepend($list, $item) {
+	@return join($item, $list);
+}

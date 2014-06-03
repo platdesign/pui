@@ -1,36 +1,13 @@
-
-// Padding
-@mixin p {
-	.p {
-		padding: 1em;
-	}
-}
-
-
-// Margin
-@mixin m {
-
-}
-
-
-
-
 @mixin helper {
-	@include p;
-	@include m;
-
-
 
 	.tl { text-align: left; }
 	.tc { text-align: center; }
 	.tr { text-align: right; }
 
-
+	.fl { float:left; }
+	.fr { float:right; }
 
 	.antialised {
 		font-smoothing:antialiased;
 	}
-
-
-	
 }

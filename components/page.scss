@@ -1,25 +1,22 @@
 @mixin page {
 	.page {
 		margin: 0 auto;
-		width: 1200px;
+		width: last($breakpoints);
 
-		@media (max-width:1200px) {
-			width: 1000px;
-		}
+		$lfn:1;
+		@each $width in $breakpoints {
 
-		@media (max-width:1000px) {
-			width: 800px;
-		}
+			@if $lfn == 1 {
+				@include brp($lfn) {
+					width: 100%!important;
+				}
+			} @else {
+				@include brp($lfn) {
+					width: brp-width($lfn - 1);
+				}
+			}
 
-		@media (max-width:800px) {
-			width: 600px;
-		}
-
-		@media (max-width:600px) {
-			width: 100%!important;
+			$lfn:$lfn+1;
 		}
 	}
-
-
-
 }

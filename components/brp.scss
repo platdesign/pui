@@ -1,41 +1,9 @@
-@mixin brp-helper {
-	$i:0;
-	%brp-off {
-		display:none;
-	}
 
-
-	@each $brp in $breakpoints {
-		$i: $i+1;
-
-		.brp-before-#{$i}, 
-		.brp-after-#{$i},
-		.brp-on-#{$i} {
-			@extend %brp-off;
-		}
-
-		@include brp($i) {
-			.brp-on-#{$i} {display:block;}
-			.brp-off-#{$i} {display:none;}
-		}
-
-		@include brp-before($i) {
-			.brp-before-#{$i} { display:block; }
-		}
-		@include brp-after($i) {
-			.brp-after-#{$i} { display:block; }
-		}
-
-	}
-
-}
-
-
-
-
-
+/**
+ * Creates a media-query with min-/max-width
+ */
 @mixin brp-media-query($min:false, $max:false) {
-	
+
 	@if $min ==false and $max != false {
 		@media (max-width: $max - 1px) {
 			@content;
@@ -55,6 +23,10 @@
 	}
 }
 
+
+/**
+ * Creates a media-query for the breakpoint-width of $index
+ */
 @mixin brp($index) {
 
 	@if $index == length($breakpoints) + 1 {
@@ -70,21 +42,31 @@
 }
 
 
-
+/**
+ * Creates a media-query for the breakpoints smaller than the width of $index
+ */
 @mixin brp-before($index) {
 	@include brp-range(false, $index) {
 		@content;
 	}
 }
 
+/**
+ * Creates a media-query for the breakpoints larger than the width of $index
+ */
 @mixin brp-after($index) {
 	@include brp-range($index, false) {
 		@content;
 	}
 }
 
+
+
+/**
+ * Creates a media-query for the breakpoints between the widths of $min- and $max-index
+ */
 @mixin brp-range($min:false, $max:false) {
-	
+
 	@if $min != false and $min < 1 { $min: false; }
 	@if $max != false and $max >= length($breakpoints)+1 { $max:false; }
 
@@ -96,10 +78,15 @@
 	@if $max != false {
 		$max: nth($breakpoints, $max);
 	}
-		
+
 
 	@include brp-media-query($min, $max) {
 		@content;
 	}
-	
+
+}
+
+
+@function brp-width($index) {
+	@return nth($breakpoints, $index);
 }

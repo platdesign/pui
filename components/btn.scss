@@ -1,0 +1,11 @@
+@mixin btn($name:false) {
+	@if $name != false {
+		.btn-#{$name} {
+			@content;
+		}
+	} @else {
+		.btn {
+			@content;
+		}
+	}
+}

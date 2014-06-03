@@ -1,4 +1,6 @@
-@import 'vars.scss';
+
+@import '_functions.scss';
+@import '_vars.scss';
 
 @import 'components/reset.scss';
 @import 'components/w.scss';
@@ -6,6 +8,8 @@
 @import 'components/helper.scss';
 @import 'components/page.scss';
 @import 'components/brp.scss';
+@import 'components/btn.scss';
+
 
 
 @mixin pui {
@@ -14,5 +18,4 @@
 	@include page;
 	@include helper;
 	@include grid;
-	@include brp-helper;
 }

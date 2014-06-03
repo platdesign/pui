@@ -1,8 +1,10 @@
-
-
+/**
+ * A list of breakpoints in `px` from narrow to wide.
+ * @type {list}
+ */
 $breakpoints: (400px, 600px, 800px, 1000px, 1200px) !default;
 
-$border-radius: 2px !default;
+
 
 
 
