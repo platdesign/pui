@@ -1,5 +1,23 @@
 
 /**
+ * Media query for orientation landscape
+ */
+@mixin landscape {
+	@media screen and (orientation:landscape) {
+		@content;
+	}
+}
+
+/**
+ * Media query for orientation portrait
+ */
+@mixin portrait {
+	@media screen and (orientation:portrait) {
+		@content;
+	}
+}
+
+/**
  * Creates a media-query with min-/max-width
  */
 @mixin brp-media-query($min:false, $max:false) {
