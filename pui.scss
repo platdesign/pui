@@ -1,6 +1,6 @@
 
-@import '_functions.scss';
-@import '_vars.scss';
+@import 'components/functions.scss';
+@import 'components/vars.scss';
 
 @import 'components/mixins.scss';
 
@@ -17,11 +17,11 @@
 @import 'components/angular.scss';
 
 @mixin pui {
-	@include reset;
+	@include pui-reset;
 	@include grid-flex;
 	@include page;
 	@include w;
-	@include helper;
+	@include pui-helper;
 }
 
 

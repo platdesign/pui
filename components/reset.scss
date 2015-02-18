@@ -9,23 +9,29 @@
 
 @mixin pui-reset {
 
-	* {
-		box-sizing: border-box;
+	@if pui-component-not-loaded('pui-reset') {
+
+		* {
+			box-sizing: border-box;
+		}
+
+		h1, h2, h3, h4, h5, h6 {
+			margin:0;
+			padding:0;
+		}
+
+		nav li a {
+			display: block;
+		}
+
+		a {
+			cursor: pointer;
+			color: inherit;
+			text-decoration: none;
+		}
+
 	}
 
-	h1, h2, h3, h4, h5, h6 {
-		margin:0;
-		padding:0;
-	}
 
-	nav li a {
-		display: block;
-	}
-
-	a {
-		cursor: pointer;
-		color: inherit;
-		text-decoration: none;
-	}
 
 }

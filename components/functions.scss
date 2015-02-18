@@ -29,3 +29,20 @@
 @function prepend($list, $item) {
 	@return join($item, $list);
 }
+
+
+$pui-loaded-components: ();
+@function pui-component-not-loaded($componentName) {
+
+	@if index($pui-loaded-components, $componentName) {
+		@if $pui-debug {
+			@debug "Already loaded: #{$componentName}";
+		}
+
+		@return false;
+	} @else {
+		$pui-loaded-components: append($pui-loaded-components, $componentName);
+		@return true;
+	}
+
+}

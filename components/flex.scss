@@ -1,43 +1,47 @@
 
 @mixin pui-flex {
 
-	%flex {
+	@if pui-component-not-loaded('pui-flex') {
 
-		position: relative;
+		%flex {
 
-		> .flex-item {
-			flex: 0 0 auto;
 			position: relative;
+
+			> .flex-item {
+				flex: 0 0 auto;
+				position: relative;
+			}
+
+			> .flex-item-stretch {
+				@extend .flex-item;
+				flex: 1 1 auto;
+			}
+
 		}
 
-		> .flex-item-stretch {
-			@extend .flex-item;
-			flex: 1 1 auto;
+		.flex-horizontal {
+			@extend %flex;
+
+			display: flex;
+			flex-direction: row;
+
+			&.flex-reverse {
+				flex-direction: row-reverse;
+			}
 		}
 
-	}
 
-	.flex-horizontal {
-		@extend %flex;
+		.flex-vertical {
+			@extend %flex;
 
-		display: flex;
-		flex-direction: row;
+			display: flex;
+			flex-direction: column;
 
-		&.flex-reverse {
-			flex-direction: row-reverse;
+			&.flex-reverse {
+				flex-direction: column-reverse;
+			}
 		}
-	}
 
-
-	.flex-vertical {
-		@extend %flex;
-
-		display: flex;
-		flex-direction: column;
-
-		&.flex-reverse {
-			flex-direction: column-reverse;
-		}
 	}
 
 }

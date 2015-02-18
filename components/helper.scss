@@ -1,13 +1,26 @@
+
+/**
+ * DEPRECATED: reset
+ */
 @mixin helper {
+	@warn 'Mixin \'helper\' is deprecated. Use pui-helper instead!';
+}
 
-	.tl { text-align: left; }
-	.tc { text-align: center; }
-	.tr { text-align: right; }
 
-	.fl { float:left; }
-	.fr { float:right; }
+@mixin pui-helper {
 
-	.antialised {
-		font-smoothing:antialiased;
+	@if pui-component-not-loaded('pui-helper') {
+
+		.tl { text-align: left; }
+		.tc { text-align: center; }
+		.tr { text-align: right; }
+
+		.fl { float:left; }
+		.fr { float:right; }
+
+		.antialised {
+			font-smoothing:antialiased;
+		}
+
 	}
 }
