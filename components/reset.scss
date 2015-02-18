@@ -1,3 +1,12 @@
+
+/**
+ * DEPRECATED: reset
+ */
+@mixin reset {
+	@warn 'Mixin \'reset\' is deprecated. Use pui-reset instead!';
+}
+
+
 @mixin pui-reset {
 
 	* {
