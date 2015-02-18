@@ -2,6 +2,8 @@
 @import '_functions.scss';
 @import '_vars.scss';
 
+@import 'components/mixins.scss';
+
 @import 'components/reset.scss';
 @import 'components/w.scss';
 @import 'components/grid.scss';
@@ -10,7 +12,9 @@
 @import 'components/brp.scss';
 @import 'components/btn.scss';
 
-
+@import 'components/flex.scss';
+@import 'components/form.scss';
+@import 'components/angular.scss';
 
 @mixin pui {
 	@include reset;
@@ -21,8 +25,3 @@
 }
 
 
-
-@mixin font-smoothing {
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-}

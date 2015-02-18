@@ -1,0 +1,22 @@
+@mixin pui-angular {
+
+
+	[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak],
+	.ng-cloak, .x-ng-cloak,
+	.ng-hide:not(.ng-hide-animate) {
+	  display: none !important;
+	}
+
+	ng\:form {
+	  display: block;
+	}
+
+	[ng-click], [ui-sref] {
+		cursor: pointer;
+	}
+
+	a, [ng-click], [ui-sref] {
+		user-select: none;
+	}
+
+}

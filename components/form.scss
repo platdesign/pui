@@ -1,0 +1,74 @@
+@mixin pui-form {
+
+	%appearance-none {
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+
+		line-height: 2;
+		padding: 0 .4em;
+		background: white;
+		border: 1px solid darken(white, 20%);
+		border-radius: 0;
+	}
+
+
+
+	input[type="text"],
+	input[type="password"],
+	input[type="url"],
+	input[type="email"],
+	select,
+	textarea {
+		@extend %appearance-none;
+		width: 100%;
+		outline: none;
+		&:invalid {
+			box-shadow: none;
+		}
+	}
+
+	label {
+		input[type="checkbox"] + span {
+			margin-left: .4em;
+			vertical-align: middle;
+			user-select: none;
+		}
+	}
+
+
+
+	form {
+
+		button {
+			@extend %appearance-none;
+			padding-left: .7em;
+			padding-right: .7em;
+			outline: none;
+
+			&:disabled {
+				opacity: .4;
+			}
+		}
+
+		label {
+			font-size: .95em;
+			display: block;
+		}
+
+		h1 {
+			padding: 0;
+			margin: 0 0 .6em 0;
+			font-weight: 100;
+		}
+
+		label + label,
+		label + input,
+		label + select,
+		label + textarea,
+		label + button {
+			margin-top: 1em;
+		}
+	}
+
+}
