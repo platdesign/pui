@@ -10,6 +10,9 @@
 			> .flex-item {
 				flex: 0 0 auto;
 				position: relative;
+
+				// limit max width to parent width (only for firefox)
+				overflow-x: hidden;
 			}
 
 			> .flex-item-stretch {

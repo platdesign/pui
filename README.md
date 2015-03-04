@@ -10,10 +10,53 @@ Platdesign UI - A scss-library for your daily needs.
 
 
 
+## Usage
+Example for a scss file with pui components:
+
+	@import './path/to/pui/pui.scss';
+	
+	@include pui-reset;
+	@include pui-flex;
+	@include pui-angular;
+	@include pui-form;
+	...
+
 ##Mixins
-- **reset**
+- **pui-reset**
 
 	Not a whole reset like normalize, but some opinionated defaults.
+
+- **pui-flex**
+
+	Adds some classes to your css for working with flexible layouts.
+	
+	- `flex-horizontal` (wrapper for flex-items)
+	- `flex-vertical` (wrapper for flex-items)
+	- `flex-item` (column or row depending on wrapper)
+	- `flex-item-stretch` (column or row which fills whole free space)
+
+- **pui-angular**
+	
+	Some handy defaults for working with [angular.js](https://angularjs.org/).
+
+	- `cursor: pointer` for ng-click and ui-sref directives
+
+- **pui-form**
+
+	Resets form elements on all devices to the same appearance.
+
+
+- **pui-helper**
+	
+	Adds some helper-classes:
+
+	- `.tl`, `.tc`, `.tr` for text-alignment (left, center, right).
+	- `.fl`, `.fr` for `float:left` and `float:right`
+	- `.antialised` sets font-smoothing for text on dark backgrounds.
+
+
+
+
 
 - **grid**
 
@@ -43,15 +86,6 @@ Platdesign UI - A scss-library for your daily needs.
 - **w(** *int $colums* **)**
 
 	Adds classes with a structure like `.w-1-3`, `.w-2-3`, etc. `$columns` defines the maximum divider of 100%.
-
-
-- **helper**
-	
-	Adds some helper-classes:
-
-	- `.tl`, `.tc`, `.tr` for text-alignment (left, center, right).
-	- `.fl`, `.fr` for `float:left` and `float:right`
-	- `.antialised` sets font-smoothing for text on dark backgrounds.
 
 
 -------

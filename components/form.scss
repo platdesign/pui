@@ -20,11 +20,18 @@
 		input[type="password"],
 		input[type="url"],
 		input[type="email"],
+		input[type="search"],
 		select,
 		textarea {
 			@extend %appearance-none;
 			width: 100%;
 			outline: none;
+			box-sizing: border-box;
+
+			&::placeholder {
+				font-weight: 300;
+			}
+
 			&:invalid {
 				box-shadow: none;
 			}
@@ -61,7 +68,7 @@
 			h1 {
 				padding: 0;
 				margin: 0 0 .6em 0;
-				font-weight: 100;
+				font-weight: 300;
 			}
 
 			label + label,

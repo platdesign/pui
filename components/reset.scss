@@ -30,6 +30,11 @@
 			text-decoration: none;
 		}
 
+		// limit images to max-width: 100% of parent container
+		img {
+			max-width: 100%;
+		}
+
 	}
 
 
