@@ -1,0 +1,18 @@
+
+@mixin pui-flex-classes {
+
+	@if pui-component-not-loaded('pui-flex-classes') {
+
+		.flex-horizontal {
+			@extend %flex-horizontal;
+		}
+
+
+		.flex-vertical {
+			@extend %flex-vertical;
+		}
+
+	}
+
+}
+

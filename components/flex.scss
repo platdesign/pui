@@ -7,40 +7,40 @@
 
 			position: relative;
 
-			> .flex-item {
+			> %flex-item {
 				flex: 0 0 auto;
 				position: relative;
 
 				// limit max width to parent width (only for firefox)
-				overflow-x: hidden;
+				//overflow-x: auto;
 			}
 
-			> .flex-item-stretch {
-				@extend .flex-item;
+			> %flex-item-stretch {
+				@extend %flex-item;
 				flex: 1 1 auto;
 			}
 
 		}
 
-		.flex-horizontal {
+		%flex-horizontal {
 			@extend %flex;
 
 			display: flex;
 			flex-direction: row;
 
-			&.flex-reverse {
+			&%flex-reverse {
 				flex-direction: row-reverse;
 			}
 		}
 
 
-		.flex-vertical {
+		%flex-vertical {
 			@extend %flex;
 
 			display: flex;
 			flex-direction: column;
 
-			&.flex-reverse {
+			&%flex-reverse {
 				flex-direction: column-reverse;
 			}
 		}
